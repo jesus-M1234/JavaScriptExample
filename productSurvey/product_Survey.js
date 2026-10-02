@@ -7,6 +7,10 @@ function submitFeedback() {
     const productType = document.getElementById('productType').value;
     const feedback = document.getElementById('feedbackText').value;
 
+    // New textarea value
+    const userExperience =
+        document.getElementById('userExperince').value;
+
     document.getElementById('userName').textContent = username;
     document.getElementById('userAge').textContent = age;
     document.getElementById('userEmail').textContent = email;
@@ -14,6 +18,10 @@ function submitFeedback() {
     document.getElementById('userDesignation').textContent = designation;
     document.getElementById('userProductChoice').textContent = productType;
     document.getElementById('userFeedback').textContent = feedback;
+
+    // Display experience
+    document.getElementById('userExperienceOutput').textContent =
+        userExperience;
 
     document.getElementById('userInfo').style.display = 'block';
 
@@ -23,7 +31,7 @@ function submitFeedback() {
 const submitButton = document.getElementById('submitBtn');
 submitButton.addEventListener('click', submitFeedback);
 
-document.addEventListener('keydown', function (event) {
+document.addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
         submitFeedback();
     }
