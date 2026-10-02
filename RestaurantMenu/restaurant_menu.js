@@ -1,9 +1,17 @@
 const breakfastMenu = ['Pancakes', 'Eggs Benedict', 'Oatmeal', 'Frittata'];
 const mainCourseMenu = ['Steak', 'Pasta', 'Burger', 'Salmon'];
 const dessertMenu = ['Cake', 'Ice Cream', 'Pudding', 'Fruit Salad'];
+const breakfastMenuPrices = ['Pancakes- $12', 'Eggs Benedict -$22.99', 'Oatmeal -$21.99', 'Frittata -$15'];
+
+let breakfastPriceTotalItems = '';
+for(let i = 0; i < breakfastMenuPrices.length; i++){
+    breakfastPriceTotalItems += `<p>Item ${i + 1}: ${breakfastMenuPrices[i]}</p>`
+}
+document.getElementById('breakfastPriceTotalMenu').innerHTML = breakfastPriceTotalItems;
+
 
  const breakfastMenuItemsHTML = breakfastMenu.map((item, index) => `<p>Item ${index + 1}: ${item}</p>`).join('');
-        document.getElementById('breakfastMenuItems').innerHTML = breakfastMenuItemsHTML;
+    document.getElementById('breakfastMenuItems').innerHTML = breakfastMenuItemsHTML;
 
 let mainCourseItem = '';
 mainCourseMenu.forEach((item, index) => {
